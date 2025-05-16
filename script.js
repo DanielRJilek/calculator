@@ -15,18 +15,24 @@ function divide(x,y) {
 }
 
 function operate(operator, x, y) {
+    let result;
     switch (operator) {
         case "add":
-            return add(x,y);
+            result =  add(x,y);
             break;
         case "subtract":
-            return subtract(x,y);
+            result =  subtract(x,y);
             break;
         case "multiply":
-            return multiply(x,y);
+            result = multiply(x,y);
             break;
         case "divide":
-            return divide(x,y);
+            result = divide(x,y);
             break;
     }
+    document.querySelector("display").textContent = result;
 }
+
+let x = null;
+let y = null;
+let result = null;
